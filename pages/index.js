@@ -2,10 +2,11 @@ import Head from 'next/head'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+
 import Layout from '../components/Layout'
 import Post from '../components/Post'
 
-export default function Index({ posts }) {
+export default function Posts({ posts }) {
   return (
     <>
       <Head>
@@ -33,7 +34,7 @@ export async function getStaticProps() {
   const posts = files.map(( filename ) => {
     const slug = filename.replace( /\.md$/, '');
     const markdown = fs.readFileSync(
-      path.join('posts', filename), 'utf8'
+      path.join( 'posts', filename ), 'utf8'
     );
 
     const { data: frontmatter } = matter( markdown );
