@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { getAllAuthors, getAuthorBySlug } from './authors'
+import { getAllAuthors } from './authors'
+import { getAllPosts } from '../blog/posts'
 
 export default function Authors({ authors }) {
     return (
@@ -16,7 +17,7 @@ export default function Authors({ authors }) {
                         </Link>
                     </h2>
 
-                    <Image alt={ author.name } src={ author.profilePictureUrl } height="40" width="40" />
+                    <Image alt={ author.name } src={ author.profilePictureUrl } height="80" width="80" />
 
                     <Link href={ author.permalink }>
                         <a>Go to profile →</a>
@@ -30,7 +31,10 @@ export default function Authors({ authors }) {
 export function getStaticProps() {
     return {
         props: {
-            authors: getAllAuthors(),
-        },
+            authors: getAllAuthors().map( author => ({
+                ...author,
+                posts: getAllPosts().filter( post => post.author === author.slug ),
+            })),
+        }
     }
 }
