@@ -2,26 +2,16 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { marked } from 'marked'
-import Head from 'next/head'
-
-import Layout from '/components/Layout'
 
 export default function Post({
-    frontmatter: { title, createdAt, excerpt },
+    frontmatter: { title, createdAt },
     content,
 }) {
     return (
         <>
-            <Head>
-                <title>{ title }</title>
-                <meta name='description' content={ excerpt } />
-            </Head>
-
-            <Layout>
-                <h1>{ title }</h1>
-                <p>{ createdAt }</p>
-                <div dangerouslySetInnerHTML={{ __html: marked( content ) }}></div>
-            </Layout>
+            <h1>{ title }</h1>
+            <p>{ createdAt }</p>
+            <div dangerouslySetInnerHTML={{ __html: marked( content ) }}></div>
         </>
     );
 }

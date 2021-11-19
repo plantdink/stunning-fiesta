@@ -1,11 +1,11 @@
 import Header from "./Header"
-import Navigation from "./Navigation"
+import Title from "./Title";
 import Footer from "./Footer"
 
 const Layout = ( props ) => (
     <>
         <Header />
-        <Navigation />
+        <Title />
         <main>{ props.children }</main>
         <Footer />
     </>

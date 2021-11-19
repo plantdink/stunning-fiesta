@@ -3,14 +3,12 @@ import Link from 'next/link'
 export default function Post({ post }) {
     return (
         <div className='post-teaser'>
-            <Link href={ `/blog/${ post.slug }` }>
-                <a><h3>{ post.frontmatter.title }</h3></a>
-            </Link>
-            <img src={ post.frontmatter.thumbnail } />
-            
+            <h1>{ post.frontmatter.title }</h1>
             <p>{ post.frontmatter.createdAt }</p>
-
             <p>{ post.frontmatter.excerpt }</p>
+            <Link href={ `/blog/${ post.slug }` }>
+                <a>Read more...</a>
+            </Link>            
             <hr />
         </div>
     )

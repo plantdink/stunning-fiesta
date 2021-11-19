@@ -1,12 +1,13 @@
-import Link from "next/link";
+import Head from 'next/head'
 
 const Header = () => {
     return (
-        <header>
-            <Link href="/">
-                <a>Developing software with a blunt instrument</a>
-            </Link>
-        </header>
+        <div>
+            <Head>
+                <title>Developing software with a blunt instrument</title>
+                <meta name='description' content='A personal blog project' />
+            </Head>
+        </div>
     );
 };
 
