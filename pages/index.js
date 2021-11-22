@@ -1,26 +1,17 @@
-import Head from 'next/head'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-import Layout from '../components/Layout'
 import Post from '../components/Post'
 
 export default function Posts({ posts }) {
   return (
     <>
-      <Head>
-        <title>Developing software with a blunt instrument</title>
-        <meta name='description' content='A personal blog project, powered by Next.js' />
-      </Head>
-
-      <Layout>
-        <div className='posts'>
-          { posts.map(( post, index ) => (
-            <Post post={ post } key={ index } />
-          ))}
-        </div>
-      </Layout>
+      <div className='posts'>
+        { posts.map(( post, index ) => (
+        <Post post={ post } key={ index } />
+        ))}
+      </div>
     </>
   )
 }
@@ -50,3 +41,16 @@ export async function getStaticProps() {
     },
   };
 }
+
+<style jsx global>{`
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', 'Oswald'
+  }
+
+  *{
+    box-sizing: border-box;
+  }
+`}</style>

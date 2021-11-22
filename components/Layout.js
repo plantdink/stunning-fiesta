@@ -1,13 +1,19 @@
 import Header from "./Header"
-import Navigation from "./Navigation"
+import Title from "./Title";
 import Footer from "./Footer"
 
 const Layout = ( props ) => (
     <>
         <Header />
-        <Navigation />
-        <main>{ props.children }</main>
-        <Footer />
+        <Title />
+        
+        <div className='content-container'>
+            <main>{ props.children }</main>
+        </div>
+
+        <footer className='footer--pin'>
+            <Footer />
+        </footer>
     </>
 );
 

@@ -7,7 +7,9 @@ export default function Author({ author }) {
         <div className='author'>
             <h1>{ author.name }</h1>
 
-            <Image alt={ author.name } src={ author.profilePictureUrl } height="120" width="120" />
+            <Image alt={ author.name } src={ author.profilePictureUrl } height="80" width="80" />
+
+            <p>{ author.bio }</p>
         </div>
     )
 }
