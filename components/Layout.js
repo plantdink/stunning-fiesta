@@ -6,8 +6,14 @@ const Layout = ( props ) => (
     <>
         <Header />
         <Title />
-        <main>{ props.children }</main>
-        <Footer />
+        
+        <div className='content-container'>
+            <main>{ props.children }</main>
+        </div>
+
+        <footer className='footer--pin'>
+            <Footer />
+        </footer>
     </>
 );
 

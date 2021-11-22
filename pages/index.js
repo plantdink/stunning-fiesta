@@ -41,3 +41,16 @@ export async function getStaticProps() {
     },
   };
 }
+
+<style jsx global>{`
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', 'Oswald'
+  }
+
+  *{
+    box-sizing: border-box;
+  }
+`}</style>

@@ -17,12 +17,6 @@ export default function Authors({ authors }) {
                         <a>{ author.name }</a>
                     </Link>
                     </h2>
-
-                    <Image alt={ author.name } src={ author.profilePictureUrl } height="80" width="80" />
-
-                    <Link href={ author.permalink }>
-                        <a>Go to profile →</a>
-                    </Link>
                 </div>
                 ))}
             </div>

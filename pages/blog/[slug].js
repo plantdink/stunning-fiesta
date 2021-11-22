@@ -2,16 +2,23 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { marked } from 'marked'
+import Link from 'next/link'
 
 export default function Post({
-    frontmatter: { title, createdAt },
+    frontmatter: { title, createdAt, author },
     content,
 }) {
     return (
         <>
             <h1>{ title }</h1>
             <p>{ createdAt }</p>
+            <p>{ author }</p>
+            <hr />
             <div dangerouslySetInnerHTML={{ __html: marked( content ) }}></div>
+            <hr />
+            <Link href='/'>
+                <a>Return to index</a>
+            </Link>
         </>
     );
 }

@@ -2,7 +2,7 @@
 title: "Hello, world!"
 excerpt: "A modern take on the classical first post"
 createdAt: "18 November 2021"
-author: "ken-livesey"
+author: "Ken Livesey"
 ---
 I'm baby schlitz fixie iPhone affogato. Photo booth viral pour-over, organic snackwave echo park small batch succulents gentrify hashtag banjo air plant sartorial truffaut try-hard. Church-key stumptown kombucha air plant meditation. Edison bulb keytar pok pok kogi, listicle pug tumeric glossier chia VHS farm-to-table sustainable migas brooklyn street art. Umami live-edge hot chicken, fam heirloom roof party pour-over. Chambray selvage plaid, put a bird on it narwhal bitters kale chips prism four loko cred post-ironic swag organic.
 

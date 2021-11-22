@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
   background-color: rgb( 249, 250, 251 );
   color: rgba( 75, 85, 99 );
@@ -15,8 +11,8 @@ html {
 
 h1 {
   color: #020223;
+  font-family: 'Oswald', sans-serif;
   font-size: 1.875rem;
-  font-weight: bold;
   line-height: 2.25rem;
   margin: 0 0 0.75rem;
 }
@@ -30,7 +26,6 @@ h2 {
 
 footer {
   background-color: #020223;
-  margin-bottom: 1.5rem;
 }
 
 footer nav {
@@ -43,7 +38,7 @@ footer ul {
   justify-content: flex-start;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding-left: 1.5rem;
 }
 
 footer li + li {
@@ -57,25 +52,43 @@ footer a, footer a:visited {
 main {
   margin: 0 auto;
   max-width: 32rem;
-  padding: .75rem 2rem 4rem;
+  padding: 0.25rem 2rem 4rem;
+}
+
+.content-container {
+  min-height: 90vh;
+}
+
+.footer--pin {
+  position: relative;
+  min-width: 100%;
+  left: 0;
+  bottom: 0;
 }
 
 .title {
   background: linear-gradient(90deg, rgb(4, 5, 31) 0%, rgb(2, 3, 35) 100%);
+  margin-bottom: .5rem;
   width: 100%;
   padding-top: 1.5rem;
-  padding-right: 1.5rem;
-  padding-bottom: .5rem;
-  padding-left: 1.5rem;
+  padding-bottom: .75rem;
   position: sticky;
   top: 0;
   z-index: 999;
 }
 
 .title h1 {
+  margin-bottom: 0.5rem;
   color: #fcfcfc;
-  font-size: 1.875rem;
+  font-size: 2.5rem;
   font-family: 'Raleway', sans-serif;
+  padding-left: 1.5rem;
+}
+
+.title > p {
+  color: #fcfcfc;
+  padding-left: 1.5rem;
+  margin: 0;
 }
 
 .author > ul {
@@ -131,6 +144,10 @@ main {
 .authors > div > a {
   display: block;
   font-size: 14px;
+}
+
+.post-teaser {
+  margin-top: 1rem;
 }
 
 .post > div {
